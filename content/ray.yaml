@@ -2,13 +2,14 @@ log:
   loglevel: info
 dns:
   servers:
-  - https+local://8.8.8.8/dns-query
+  - https+local://dns.adguard.com/dns-query
 inbounds:
 - port: 61080
-  protocol: vmess
+  protocol: vless
   settings:
     clients:
     - id: VmessUUID
+    decryption: none
   streamSettings:
     network: ws
     wsSettings:
